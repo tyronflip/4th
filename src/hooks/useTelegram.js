@@ -10,11 +10,12 @@ export function useTelegram() {
         if(tg.MainButton.isVisible) {
             tg.MainButton.hide();
         } else {
-            tg.MainButton.show()
+            tg.MainButton.show();
         }
     }
     return {
         onClose,
+        onToggleButton,
         tg,
         user: tg.initDataUnsafe?.user,
     }
