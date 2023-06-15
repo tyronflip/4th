@@ -1,5 +1,3 @@
-import App from "../App";
-
 const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
@@ -23,5 +21,3 @@ export function useTelegram() {
         queryId: tg.initDataUnsafe?.queryId,
     }
 }
-
-export default App;
