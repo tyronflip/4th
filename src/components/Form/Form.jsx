@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useTelegram } from "../../hooks/useTelegram";
 import './Form.css';
 
 
@@ -8,6 +9,21 @@ const Form = () => {
     const[street, setStreet] = useState('');
     const[number, setNumber] = useState('');
     const[name, setName] = useState('');
+    const {tg} = useTelegram();
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: 'Відправити дані'
+        })
+    }, [])
+
+    useEffect(() => {
+        if(!street || !number) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+        }
+    })
 
     const onChangeCity = (e) => {
         setCity(e.target.value)
