@@ -5,7 +5,7 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', img:"https://smak-lucky.com/files/products/neopolitana.465x465.jpg?ebec22dbe10caf9fc088fc3bca6e892d", title: 'Неаполітана', price: 350, description: 'Курка, томати, солодкий перець, базилік, шампіньони, моцарела'},
+    {id: '1', title: 'Неаполітана', price: 350, description: 'Курка, томати, солодкий перець, базилік, шампіньони, моцарела'},
     {id: '2', title: 'Гавайська', price: 300, description: 'Курка, ананаси, цибуля, моцарела, соус'},
     {id: '3', title: '4 сира', price: 320, description: 'Моцарела, пармезан, горгонзола, чеддер'},
     {id: '4', title: 'Цезар', price: 350, description: 'Курка, томати чері, Айсберг, моцарела, пармезан, соус'},
@@ -29,7 +29,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://85.119.146.179:8000/web-data', {
+        fetch('localhost:8000', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
