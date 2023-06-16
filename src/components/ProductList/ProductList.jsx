@@ -5,14 +5,12 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
+    {id: '1', img:"https://smak-lucky.com/files/products/neopolitana.465x465.jpg?ebec22dbe10caf9fc088fc3bca6e892d", title: 'Неаполітана', price: 350, description: 'Курка, томати, солодкий перець, базилік, шампіньони, моцарела'},
+    {id: '2', title: 'Гавайська', price: 300, description: 'Курка, ананаси, цибуля, моцарела, соус'},
+    {id: '3', title: '4 сира', price: 320, description: 'Моцарела, пармезан, горгонзола, чеддер'},
+    {id: '4', title: 'Цезар', price: 350, description: 'Курка, томати чері, Айсберг, моцарела, пармезан, соус'},
+    {id: '5', title: 'Карбонара', price: 350, description: 'Балик, моцарела, пармезан, яйце, соус'},
+    {id: '6', title: 'Овочева', price: 250, description: 'Томати, солодкий перець, солоний огірок, маслини, моцарела, соус'},
 ]
 
 const getTotalPrice = (items = []) => {
